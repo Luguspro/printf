@@ -32,15 +32,19 @@ while (num_addrs > 0)
 {
 buffer[ind--] = map_to[num_addrs % 16];
 num_addrs /= 16;
-length + 1;
+length++;
 }
 if ((flags & F_ZERO) && !(flags & F_MINUS))
-padd = '0';
+	padd = '0';
 if (flags & F_PLUS)
-extra_c = '+', length + 1;
+{
+extra_c = '+';
+length++; }
 else if (flags & F_SPACE)
-extra_c = ' ', length + 1;
-ind++;
+{
+extra_c = ' ';
+length++;
+ind++; }
 /*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
 return (write_pointer(buffer, ind, length,
 width, flags, padd, extra_c, padd_start));
@@ -114,7 +118,7 @@ for (i = i - 1; i >= 0; i--)
 {
 char z = str[i];
 write(1, &z, 1);
-count + 1;
+count++;
 }
 return (count);
 }
@@ -164,7 +168,7 @@ if (!in[j])
 {
 x = str[i];
 write(1, &x, 1);
-count + 1;
+count++;
 }
 }
 return (count);

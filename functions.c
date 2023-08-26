@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*-----------------PRINT CHAR-------------------*/
+/*-------PRINT CHAR--------*/
 /**
 * print_char - Prints a char
 * @types: argument list
@@ -12,14 +12,13 @@
 *
 * Return: Number of chars printed
 */
-
 int print_char(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
 char c = va_arg(types, int);
 return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/*-----------------------PRINT A STRING----------------------*/
+/*----------PRINT A STRING-----------*/
 /**
 * print_string - Print a string
 * @types: argument list
@@ -51,7 +50,7 @@ str = " ";
 }
 while (str[length] != '\0')
 length++;
-if (precision >= 0 && precision < length)
+if ((precision >= 0) && (precision < length))
 length = precision;
 if (width > length)
 {
@@ -72,7 +71,7 @@ return (width);
 }
 return (write(1, str, length));
 }
-/*-------------------PRINT PERCENT SIGN-----------------*/
+/*------PRINT PERCENT SIGN---------*/
 /**
 * print_percent - Print a percent sign of _printf
 * @types: argument list
@@ -95,7 +94,7 @@ UNUSED(precision);
 UNUSED(size);
 return (write(1, "%%", 1));
 }
-/*--------------PRINT INT---------------*/
+/*-------PRINT INT----------*/
 /**
 * print_int - Print int
 * @types: argument list
@@ -106,6 +105,7 @@ return (write(1, "%%", 1));
 * @size: Size specifier
 * Return: Number of chars printed
 */
+
 int print_int(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {

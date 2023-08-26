@@ -6,6 +6,7 @@
 *
 * Return: 1 if c is printable and 0 otherwise
 */
+
 int is_printable(char c)
 {
 if (c >= 32 && c < 127)
@@ -21,6 +22,7 @@ return (0);
 *
 * Return: Always 3(success)
 */
+
 int append_hexa_code(char ascii_code, char buffer[], int i)
 {
 	char map_to[] = "0123456789ABCDEF";

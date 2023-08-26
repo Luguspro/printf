@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*----------HANDLE WRITTEN BY THIS CODE----------*/
+/*------HANDLE WRITTEN BY THIS CODE-------*/
 /**
 * handle_write_char - function to print a string
 * @c: char types
@@ -12,6 +12,7 @@
 *
 * Return: Number of chars printed
 */
+
 int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -40,7 +41,7 @@ write(1, &buffer[0], 1));
 return (write(1, &buffer[0], 1));
 }
 
-/*------------------TO WRITE NUMBER-------------------*/
+/*---------FUNCTION TO WRITE NUMBER---------*/
 
 /**
 * write_number - function to prints a string
@@ -168,6 +169,7 @@ return (write(1, &buffer[ind], length)); }
 * @padd: Char representing the padding @extra_c: Char representing extra char
 * @padd_start: Startibg index for padding @Return: Number of written chars
 */
+
 int write_pointer(char buffer[], int ind, int length,
 int width, int flags, char padd, char extra_c, int padd_start)
 {

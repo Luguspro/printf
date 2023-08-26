@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*----------PRINT POINTER---------*/
+/*------FUNCTION TO PRINT POINTER------*/
 /**
 * print_pointer - Print the value of a pointer variable
 * @types: Argument list
@@ -12,6 +12,8 @@
 *
 * Return: Number of chars printed.
 */
+
+
 int print_pointer(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -49,7 +51,7 @@ ind++; }
 return (write_pointer(buffer, ind, length,
 width, flags, padd, extra_c, padd_start));
 }
-/*------------TO PRINT NON PRINTABLE---------------*/
+/*-----FUNCTION TO PRINT NON PRINTABLE-------*/
 /**
 * print_non_printable - Print ascii codes in hexa of non printable chars
 * @types: Argument list
@@ -61,6 +63,7 @@ width, flags, padd, extra_c, padd_start));
 *
 * Return: Number of chars printed
 */
+
 int print_non_printable(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -84,7 +87,7 @@ i++;
 buffer[i + offset] = '\0';
 return (write(1, buffer, i + offset));
 }
-/*-------------PRINT REVERSE--------------*/
+/*-----FUNCTION TO PRINT REVERSE-----*/
 /**
 * print_reverse - Print reverse string.
 * @types: Argument list
@@ -96,6 +99,7 @@ return (write(1, buffer, i + offset));
 *
 * Return: Numbers of chars printed
 */
+
 int print_reverse(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
@@ -122,7 +126,7 @@ count++;
 }
 return (count);
 }
-/*------------- PRINT A STRING IN ROT13--------------*/
+/*------ PRINT A STRING IN ROT13-------*/
 /**
 * print_rot13string - Print a string in rot13.
 * @types: Argument list
